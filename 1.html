@@ -2,81 +2,65 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프로 골프 스윙</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>프로 골프 스윙</h1>
-        <nav>
-            <ul>
-                <li><a href="#pga">PGA</a></li>
-                <li><a href="#lpga">LPGA</a></li>
-                <li><a href="#kpga">KPGA</a></li>
-                <li><a href="#klpga">KLPGA</a></li>
-                <li><a href="#about">소개</a></li>
-                <li><a href="#contact">연락처</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero">
-            <h2>프로의 스윙을 배워보세요!</h2>
-            <p>최고의 골퍼들이 사용하는 스윙 기술을 영상으로 확인하세요.</p>
-            <a href="#pga" class="cta-button">영상 보기</a>
-        </section>
-
-        <section id="pga">
-            <h2>PGA 영상</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/shorts/1leJJqBFW9o" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/shorts/RoeWzvdNs9k" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/shorts/ghgmGhk-7-w" frameborder="0" allowfullscreen></iframe>
+    <div class="wrapper">
+        <div class="container">
+          <div class="sign-up-container">
+            <form>
+              <h1>Create Account</h1>
+              <div class="social-links">
+                <div>
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+                <div>
+                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </div>
+                <div>
+                  <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <span>or use your email for registration</span>
+              <input type="text" placeholder="Name">
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Password">
+              <button class="form_btn">Sign Up</button>
+            </form>
+          </div>
+          <div class="sign-in-container">
+            <form>
+              <h1>Sign In</h1>
+              <div class="social-links">
+                <div>
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </div>
+                <div>
+                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </div>
+                <div>
+                  <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+              </div>
+              <span>or use your account</span>
+              <input type="email" placeholder="Email">
+              <input type="password" placeholder="Password">
+              <button class="form_btn">Sign In</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay-left">
+              <h1>Welcome Back</h1>
+              <p>To keep connected with us please login with your personal info</p>
+              <button id="signIn" class="overlay_btn">Sign In</button>
             </div>
-        </section>
-
-        <section id="lpga">
-            <h2>LPGA 영상</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/YOUR_LPGA_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/YOUR_LPGA_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/YOUR_LPGA_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            <div class="overlay-right">
+              <h1>Hello, Friend</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <button id="signUp" class="overlay_btn">Sign Up</button>
             </div>
-        </section>
-
-        <section id="kpga">
-            <h2>KPGA 영상</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/YOUR_KPGA_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/YOUR_KPGA_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/YOUR_KPGA_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section id="klpga">
-            <h2>KLPGA 영상</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/YOUR_KLPGA_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/YOUR_KLPGA_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/YOUR_KLPGA_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section id="about">
-            <h2>소개</h2>
-            <p>이 웹사이트는 프로 골프 스윙을 배우고자 하는 분들을 위한 플랫폼입니다. PGA, LPGA, KPGA, KLPGA의 다양한 스윙 기술과 노하우를 영상으로 제공합니다.</p>
-        </section>
-
-        <section id="contact">
-            <h2>연락처</h2>
-            <p>문의 사항이 있으시면 이메일로 연락주세요: info@golf-swing.com</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 프로 골프 스윙. 모든 권리 보유.</p>
-    </footer>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
