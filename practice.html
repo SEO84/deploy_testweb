@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Info.</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        #MyInfo2 {
+            color: rgb(252, 6, 6) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Perfect Golf Swing</a></h1>
+        <nav>
+            <ul>
+                <li><a href="2.html">Equipment</a></li>
+                <li><a href="3.html">Lessons</a></li>
+                <li><a href="4.html">Tournaments</a></li>
+                <li><a href="5.html">Accessories</a></li>
+                <li><a href="practice.html" class="active">practice</a></li>
+            </ul>
+        </nav>
+
+        <div class="login"><a href="1.html">Login</a></div>
+    </header>
+    <h1>나의 골프 정보 기입(5단원)</h1>
+    <div id="GolfInfo">
+        <form>
+            <fieldset>
+                <legend>나의 정보</legend>
+                <ul id="MyInfo">
+                    <li>
+                        <label for="user-name">이름 </label>
+                        <input type="text" id="user-name">
+                    </li>
+                    <li>
+                        <label for="addr">주소</label>
+                        <input type="text" id="addr">
+                    </li>
+                    <li>
+                        <label for="mail">이메일</label>
+                        <input type="email" id="mail">
+                    </li>
+                    <li>
+                        <label for="phone">연락처</label>
+                        <input type="tel" id="phone">
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+            </p>
+            <fieldset>
+                <legend>골프 정보</legend>
+                <p><b>구력을 선택해 주세요.</b></p>
+                <ul id="YearsPlaying">
+                    <label><input type="checkbox" value="s_1">입문</label>
+
+                    <label><input type="checkbox" value="s_2">1년 이하</label>
+
+                    <label><input type="checkbox" value="s_3">1년~3년</label>
+
+                    <label><input type="checkbox" value="s_4">3년 이상</label>
+                </ul>
+                <p><b>레슨을 받을 수 있는 기간을 선택해 주세요.</b></p>
+                <ul id="LessonDate">
+                    <li><label>시작 <input type="date" value="l_1"></label></li>
+                    <li><label>종료 <input type="date" value="l_2"></label></li>
+                </ul>
+            </fieldset>
+            <div>
+                <button type="submit">저장하기</button>
+                <button type="reset">취소하기</button>
+            </div>
+        </form>
+    </div>
+
+    <h1>나의 골프 정보 기입(6단원)</h1>
+    <div id="GolfInfo2">
+        <form>
+            <fieldset>
+                <legend>나의 정보</legend>
+                <ul id="MyInfo2">
+                    <li>
+                        <label style="color:blue;" for="user-name">이름 </label>
+                        <input type="text" id="user-name">
+                    </li>
+                    <li>
+                        <label for="addr">주소</label>
+                        <input type="text" id="addr">
+                    </li>
+                    <li>
+                        <label for="mail">이메일</label>
+                        <input type="email" id="mail">
+                    </li>
+                    <li>
+                        <label for="phone">연락처</label>
+                        <input type="tel" id="phone">
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+
+    <h1>레슨 회사 소개(7단원)</h1>
+    <div id="LessonSite">
+        <h2>JNGK아카데미</h2>
+        <nav2>
+            <ul>
+                <li2><a href="http://www.jngk.co.kr/bbs/content.php?co_id=comp_info">회사 소개</a></li2>
+                <li2><a href="http://www.jngk.co.kr/bbs/content.php?co_id=aca_info">아카데미 소개</a></li2>
+                <li2><a href="http://www.jngk.co.kr/bbs/content.php?co_id=pro_edu">프로교육</a></li2>
+                <li2><a href="http://www.jngk.co.kr/bbs/board.php?bo_table=data1">소식</a></li2>
+            </ul>
+        </nav2>
+    </div>
+
+    <h1>프로 사진 수정(8단원)</h1>
+    <div id="LessonPro1">
+        <img src="김현지프로.jpg">
+        <img id="round" src="김현지프로.jpg">
+    </div>
+    <br>
+
+    <p>
+    </p>
+
+    <h1>레슨 프로 소개하기(9단원)</h1>
+    <div id="LessonPro2">
+        <h2>김현지 프로</h2>
+        <img src="김현지프로.jpg" sizes="50%">
+        <p>김현지 프로는 부산 센텀시티 아카데미에서 활발히 활동하는 골프 프로입니다.</p>
+        <p>그녀는 골프 레슨뿐만 아니라 다양한 골프 관련 프로그램을 운영하며,</p>
+        <p>많은 골프 애호가들에게 도움을 주고 있습니다. </p>
+    </div>
+
+</body>
+
+</html>

@@ -6,7 +6,16 @@ body {
 
 header {
     background-color: #333;
-    color: white;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    background-color: #333;
+    color: rgb(255, 255, 255);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -28,7 +37,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -43,7 +52,7 @@ nav ul li a {
 section {
     padding: 40px;
     margin: 20px;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     border-radius: 8px;
 }
 
@@ -66,4 +75,59 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+#MyInfo2 {
+    width: 50%;
+    /* 너비 */
+    margin: 10px auto;
+    /* 바깥 여백 */
+    padding: 10px;
+    /* 테두리와 내용 사이 여백 */
+    color: brown
+}
+
+nav2 {
+    width: 300px;
+    margin: 50px 30px;
+}
+
+ul2 {
+    list-style: none;
+}
+
+li2 {
+    border: 1px solid #222;
+    padding: 20px;
+    margin: 5px;
+}
+
+#LessonSite a {
+    text-decoration: none;
+}
+
+#LessonPro1 img {
+
+    margin-left: 20px;
+    width: 300px;
+ 
+    height: auto;
+    
+}
+
+#LessonPro2 img {
+    float: left;
+    clear: left;
+    /* 오른쪽에 떠 있게 */
+    margin-left: 20px;
+    width: 500px;
+    /* 원하는 너비로 설정 */
+    height: auto;
+    
+}
+
+
+#round {
+    border-radius: 50px;
+    /* 모든 꼭짓점을 둥글게 */
 }
