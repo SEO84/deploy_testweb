@@ -127,11 +127,34 @@ li2 {
 }
 
 
-#round {
-    border-radius: 50px;
-    /* 모든 꼭짓점을 둥글게 */
+#LessonPro1 {
+    position: relative; /* 자식 요소에 절대 위치를 사용할 수 있도록 설정 */
 }
 
+.gradient {
+    position: relative; /* 상대 위치 설정 */
+    width: 300px; /* 너비 설정 */
+    height: 300px; /* 높이 설정 */
+    overflow: hidden; /* 넘치는 부분 숨기기 */
+    border-radius: 50px; /* 둥글게 설정 */
+}
+
+.gradient img {
+    width: 100%; /* 이미지 너비 100% */
+    height: auto; /* 자동 높이 */
+    border-radius: 50px; /* 이미지도 둥글게 */
+}
+
+.gradient::after {
+    content: ''; /* 빈 내용을 가지는 가상 요소 생성 */
+    position: absolute; /* 절대 위치 설정 */
+    top: 0; /* 위쪽 맞춤 */
+    left: 0; /* 왼쪽 맞춤 */
+    right: 0; /* 오른쪽 맞춤 */
+    bottom: 0; /* 아래쪽 맞춤 */
+    background: linear-gradient(45deg, rgba(240, 6, 102, 0.5), rgba(255, 153, 153, 0.5)); /* 그라데이션 색상 */
+    border-radius: 50px; /* 둥글게 설정 */
+}
 #Academy a[href *="academy"] {
     /* href 속성값 중에 w3가 있는 a 요소를 찾는 선택자 */
     background: blue;
@@ -213,6 +236,7 @@ li2 {
     border-radius: 10px; /* 둥근 모서리 */
     margin: 0 10px; /* 박스 간격 */
 }
+
 
 /* 각 박스에 대한 이미지 설정 */
 #opt1 .box1 {
