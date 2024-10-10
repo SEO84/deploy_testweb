@@ -1,3 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li a.active {
+    color: yellow;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.login a {
+    color: white;
+    text-decoration: none;
+    background-color: #4b739e;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+section {
+    padding: 40px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #007BFF;
+}
+
+section a {
+    display: block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#MyInfo2 {
+    width: 50%;
+    /* 너비 */
+    margin: 10px auto;
+    /* 바깥 여백 */
+    padding: 10px;
+    /* 테두리와 내용 사이 여백 */
+    color: brown
+}
+
+nav2 {
+    width: 300px;
+    margin: 50px 30px;
+}
+
+ul2 {
+    list-style: none;
+}
+
+li2 {
+    border: 1px solid #222;
+    padding: 20px;
+    margin: 5px;
+}
 p{margin-bottom: 50px;}
 #Academy a[href *="academy"] {
     /* href 속성값 중에 w3가 있는 a 요소를 찾는 선택자 */
