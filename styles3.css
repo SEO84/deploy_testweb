@@ -1,0 +1,248 @@
+p{margin-bottom: 50px;}
+#Academy a[href *="academy"] {
+    /* href 속성값 중에 w3가 있는 a 요소를 찾는 선택자 */
+    
+    background: blue;
+    color: white;
+}
+#Academy ul {
+    
+    list-style: circle;
+}
+
+#Academy li {
+    padding: 5px 30px;
+}
+
+#Academy li a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ccc;
+	padding: 20px;	
+    
+}
+
+#signup {
+	background:#fff;
+	border:1px solid #222;
+	border-radius: 5px;
+	padding: 20px;
+	width: 400px;	
+}
+		
+#signup fieldset {
+	border: 1px solid #ccc;
+	margin-bottom: 30px;
+}
+
+#signup fieldset:last-of-type {
+	border:none;
+}
+
+#signup legend {
+	font-size: 16px;
+	font-weight: bold;
+	padding-left:5px;
+	padding-bottom: 10px;	
+}
+			
+#signup ul li {
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+			
+#signup label {
+	float: left;
+	font-size: 13px;
+	width: 110px;
+}
+
+#signup button {	
+	border: 1px solid #222;
+	border-radius: 20px;
+	display: block;
+	font-size: 16px;
+	letter-spacing: 1px;
+	margin: auto;
+	padding: 7px 25px;
+}
+
+#signup input[type=text], #signup input[type=password], #signup input[type=tel], #signup input[type=email] {
+	border: 1px solid #ccc;  /* 텍스트 필드 테두리 지정 */
+	border-radius: 3px;  /* 텍스트 필드 모서리를 둥글게 지정 */
+	font-size: 13px;  /* 텍스트 필드 안의 글자 크기 지정 */
+	padding: 5px;  /* 텍스트 필드와 내용 사이의 패딩 지정 */
+	width: 200px;  /* 텍스트 필드 너비 지정 */
+}					
+
+/*
+#signup input:not[type=radio] { 
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-size: 13px;
+	padding: 5px;
+	width: 200px;
+}
+*/
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+#box1 {
+    background-image: url('김현지프로.jpg');
+    animation: pulse 1.5s infinite;
+}
+
+#box2 {
+    background-image: url('위혜림프로.jpg');
+    animation: spin 1.5s infinite;
+}
+
+#box3 {
+    background-image: url('박흥수프로.jpg');
+    animation: shape 1.5s infinite;
+}
+
+#box4 {
+    background-image: url('박기수프로.jpg');
+    animation: fade-in 1.5s infinite;
+}
+#box5 {
+    background-image: url('로리맥길로이.jpg');
+    animation: shake 1.5s infinite;
+}
+#box6 {
+    background-image: url('타이거우즈.jpg');
+    animation: flip 1.5s infinite;
+}
+#box7 {
+    background-image: url('스코티세플러.jpg');
+    animation: slide-in 1.5s infinite;
+}
+#box8 {
+    background-image: url('김주형.jpg');
+    animation: bounce 1.5s infinite;
+}
+
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes shape {
+    from { border: 1px solid transparent; }
+    to { border: 1px solid #000; border-radius: 50%; }
+}
+
+@keyframes rotate {
+    from { transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: perspective(120px) rotateX(-180deg) rotateY(0deg); }
+    to { transform: perspective(120px) rotateX(-180deg) rotateY(-180deg); }
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+@keyframes flip {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+@keyframes slide-in {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+.box:hover {
+    transform: scale(1.05);
+}
+
+#signup input[required] {  /* 필수 입력 필드의 스타일 */
+	border:1px red solid;
+}
+
+#signup input[readonly] {  /* 읽기 전용 필드의 스타일 */
+	border:none;
+}
+
+#signup button:hover {  /* #singup 하위에 있는 버튼에 마우스 올렸을 때 스타일 */
+  background-color:#222;
+  color:#fff;
+}
+#Academy a[href *="academy"] {
+    /* href 속성값 중에 w3가 있는 a 요소를 찾는 선택자 */
+    background: blue;
+    color: white;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+    font-size: 16px;
+}
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+}
+.card {
+    background-color: #fff;
+    box-shadow: 0px 1px 5px #222;
+}
+.card > header {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+.card > p {
+    padding: 0.5rem;
+    line-height: 1.6em;
+}
+.card > img {
+    max-width: 1px; /* 이미지 크기를 줄임 */
+    height: auto; /* 비율 유지 */
+    display: block; /* 블록 요소로 설정하여 여백 조정 */
+    margin: 0 auto; /* 중앙 정렬 */
+}
+#MyInfo2 {
+    color: rgb(252, 6, 6) !important;
+}
+

@@ -110,9 +110,9 @@ li2 {
 
     margin-left: 20px;
     width: 300px;
- 
+
     height: auto;
-    
+
 }
 
 #LessonPro2 img {
@@ -123,7 +123,7 @@ li2 {
     width: 500px;
     /* 원하는 너비로 설정 */
     height: auto;
-    
+
 }
 
 
@@ -131,3 +131,119 @@ li2 {
     border-radius: 50px;
     /* 모든 꼭짓점을 둥글게 */
 }
+
+#Academy a[href *="academy"] {
+    /* href 속성값 중에 w3가 있는 a 요소를 찾는 선택자 */
+    background: blue;
+    color: white;
+}
+
+
+#Academy ul {
+    list-style: circle;
+}
+
+#Academy li {
+    padding: 5px 30px;
+}
+
+#Academy li a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.origin {
+    width: 40px;
+    height: 50px;
+    border: 1px solid black;
+    margin: 400px;
+    float: left;
+}
+
+.origin>div {
+    width: 30px;
+    height: 40px;
+}
+
+.rotatex:hover {
+    transform: rotateX(20deg);
+    /* x축으로 50도 회전 */
+}
+
+#pers {
+    perspective: 100px;
+    /* 원근감 추가 */
+}
+
+
+
+.container {
+    display: flex; /* 박스를 가로로 배치 */
+    justify-content: space-around; /* 간격 조정 */
+    margin-bottom: 20px; /* 아래 간격 */
+}
+
+#opt1, #opt2, #opt3, #opt4, #opt5 {
+    display: flex; /* Flexbox로 설정 */
+}
+
+#opt1 {
+    align-items: flex-start; /* 교차축 시작점 기준으로 배치 */
+}
+#opt2 {
+    align-items: flex-end; /* 교차축 끝점 기준으로 배치 */     
+}
+#opt3 {
+    align-items: center; /* 교차축 중앙 기준으로 배치 */
+}
+#opt4 {
+    align-items: baseline; /* 문자 기준선에 맞춰 배치 */
+} 
+#opt5 {
+    align-items: stretch; /* 항목을 늘려 교차축에 가득 차게 배치 */
+} 
+
+.box {
+    width: 200px; /* 박스 너비 */
+    height: 200px; /* 박스 높이 */
+    background-size: cover; /* 배경 이미지 크기 조정 */
+    background-position: center; /* 배경 이미지 중앙 정렬 */
+    border: 2px solid #ccc; /* 테두리 */
+    border-radius: 10px; /* 둥근 모서리 */
+    margin: 0 10px; /* 박스 간격 */
+}
+
+/* 각 박스에 대한 이미지 설정 */
+#opt1 .box1 {
+    background-image: url('김현지프로.jpg');
+}
+#opt1 .box2 {
+    background-image: url('위혜림프로.jpg');
+}
+#opt1 .box3 {
+    background-image: url('박흥수프로.jpg');
+}
+#opt1 .box4 {
+    background-image: url('박기수프로.jpg');
+}
+
+#opt2 .box1 { background-image: url('김현지프로.jpg'); }
+#opt2 .box2 { background-image: url('위혜림프로.jpg'); }
+#opt2 .box3 { background-image: url('박흥수프로.jpg'); }
+#opt2 .box4 { background-image: url('박기수프로.jpg'); }
+
+#opt3 .box1 { background-image: url('김현지프로.jpg'); }
+#opt3 .box2 { background-image: url('위혜림프로.jpg'); }
+#opt3 .box3 { background-image: url('박흥수프로.jpg'); }
+#opt3 .box4 { background-image: url('박기수프로.jpg'); }
+
+#opt4 .box1 { background-image: url('김현지프로.jpg'); }
+#opt4 .box2 { background-image: url('위혜림프로.jpg'); }
+#opt4 .box3 { background-image: url('박흥수프로.jpg'); }
+#opt4 .box4 { background-image: url('박기수프로.jpg'); }
+
+#opt5 .box1 { background-image: url('김현지프로.jpg'); }
+#opt5 .box2 { background-image: url('위혜림프로.jpg'); }
+#opt5 .box3 { background-image: url('박흥수프로.jpg'); }
+#opt5 .box4 { background-image: url('박기수프로.jpg'); }
