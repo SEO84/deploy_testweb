@@ -345,7 +345,5 @@ body {
     display: block; /* 블록 요소로 설정하여 여백 조정 */
     margin: 0 auto; /* 중앙 정렬 */
 }
-#MyInfo2 {
-    color: rgb(252, 6, 6) !important;
-}
+
 
