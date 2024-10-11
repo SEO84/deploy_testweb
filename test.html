@@ -1,32 +1,134 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="styles3.css">
     <title>이미지 변경</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            background-color: #333;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li a.active {
+            color: yellow;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .login a {
+            color: white;
+            text-decoration: none;
+            background-color: #4b739e;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 40px;
+            margin: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+        }
+
+        section h2 {
+            color: #007BFF;
+        }
+
+        section a {
+            display: block;
+            margin-top: 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        #MyInfo2 {
+            width: 50%;
+            /* 너비 */
+            margin: 10px auto;
+            /* 바깥 여백 */
+            padding: 10px;
+            /* 테두리와 내용 사이 여백 */
+            color: brown
+        }
+
+   
+
+      
+
         #result {
             display: flex;
             /* 이미지를 세로로 나란히 배치 */
-            flex-direction: column; 
+            flex-direction: column;
             margin-top: 100px;
             padding: 50px;
             border: 1px solid #ccc;
-            width: 400px;
-            height: auto; /* 높이 자동 조절 */
+            width: 700px;
+            height: auto;
+            /* 높이 자동 조절 */
             margin: 30px auto;
             border-radius: 15px;
         }
 
         .item {
-            display: flex; /* 이미지와 텍스트를 가로로 나란히 배치 */
-            margin-bottom: 10px; /* 항목 간격 */
+            display: flex;
+            /* 이미지와 텍스트를 가로로 나란히 배치 */
+            font-size: 25px;
+            margin-bottom: 10px;
+            
+            /* 항목 간격 */
         }
 
         .image {
-            width: 100px; /* 이미지 너비 */
-            height: 100px; /* 이미지 높이 */
-            margin-right: 50px; /* 이미지와 텍스트 간격 */
+            width: 200px;
+            /* 이미지 너비 */
+            height: 200px;
+            /* 이미지 높이 */
+            margin-right: 50px;
+            /* 이미지와 텍스트 간격 */
         }
 
         a:link,
@@ -35,16 +137,16 @@
             text-decoration: none;
         }
 
-        ul {
+        ul2 {
             list-style: none;
             width: 500px;
             margin: 10px auto;
             padding: 0;
         }
 
-        li {
+        li2 {
             display: inline-block;
-            width: 120px;
+            width: 200px;
             border: 1px solid #ccc;
             padding: 10px 15px;
             font-size: 20px;
@@ -52,13 +154,16 @@
         }
 
         .description {
-            max-width: 800px; /* 텍스트 최대 너비 */
-           
+            max-width: 1000px;
+            /* 텍스트 최대 너비 */
+
         }
 
         p {
-            margin: 0; /* 기본 마진 제거 */
-            line-height: 1.5em; /* 줄 높이 조절 */
+            margin: 0;
+            /* 기본 마진 제거 */
+            line-height: 2.5em;
+            /* 줄 높이 조절 */
         }
     </style>
 </head>
@@ -73,18 +178,18 @@
                 <li><a href="4.html">Tournaments</a></li>
                 <li><a href="5.html">Accessories</a></li>
                 <li><a href="practice.html">practice(5~9)</a></li>
-                <li><a href="practice2.html" >practice(10~13)</a></li>
-                <li><a href="test.html"class="active">음식소개</a></li>
+                <li><a href="practice2.html">practice(10~13)</a></li>
+                <li><a href="test.html" class="active">음식소개</a></li>
             </ul>
         </nav>
 
         <div class="login"><a href="1.html">Login</a></div>
     </header>
-    <ul>
-        <li><a href="#" onclick="changeBg('green')">강갈비탕</a></li>
-        <li><a href="#" onclick="changeBg('orange')">라마앤바나나</a></li>
-        <li><a href="#" onclick="changeBg('purple')">흥부돼지국밥</a></li>
-    </ul>
+    <ul2>
+        <li2><a href="#" onclick="changeBg('green')">강갈비탕</a></li2>
+        <li2><a href="#" onclick="changeBg('orange')">라마앤바나나</a></li2>
+        <li2><a href="#" onclick="changeBg('purple')">흥부돼지국밥</a></li2>
+    </ul2>
 
     <div id="result"></div>
 
@@ -97,37 +202,37 @@
             let items;
             if (color === 'green') {
                 items = [
-                    { 
-                        src: '강갈비탕.jpg', 
+                    {
+                        src: '강갈비탕.jpg',
                         text: [
-                            '★ 강갈비탕 : 12,500원', 
-                            '★ 아롱사태 수육 : 24,000원', 
-                            '★ 강갈비국밥 : 8,500원' 
-                        ] 
+                            '★ 강갈비탕 : 12,500원',
+                            '★ 아롱사태 수육 : 24,000원',
+                            '★ 강갈비국밥 : 8,500원'
+                        ]
                     },
                 ];
             } else if (color === 'orange') {
                 items = [
-                    { 
-                        src: '라마앤바나나.jpg', 
+                    {
+                        src: '라마앤바나나.jpg',
                         text: [
-                            '★ 탄두리 파니르 : 20,000원', 
-                            '★ 인디아 퀘사디아 : 17,000원', 
-                            '★ 탄두리 띠까 : 16,000원' 
-                        ] 
+                            '★ 탄두리 파니르 : 20,000원',
+                            '★ 인디아 퀘사디아 : 17,000원',
+                            '★ 탄두리 띠까 : 16,000원'
+                        ]
                     },
                 ];
             } else if (color === 'purple') {
                 items = [
-                    { 
-                        src: '흥부돼지국밥.jpg', 
+                    {
+                        src: '흥부돼지국밥.jpg',
                         text: [
-                            '★ 막 삶은 돼지국밥 : 9,000원', 
-                            '★ 순대국밥 : 9,000원', 
-                            '★ 고기왕만두(5개) : 8,000원' 
-                        ] 
+                            '★ 막 삶은 돼지국밥 : 9,000원',
+                            '★ 순대국밥 : 9,000원',
+                            '★ 고기왕만두(5개) : 8,000원'
+                        ]
                     },
-                  ];
+                ];
             }
 
             // 결과 div에 이미지와 설명 추가
@@ -155,4 +260,5 @@
         }
     </script>
 </body>
+
 </html>
