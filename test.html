@@ -87,48 +87,33 @@
 
         #MyInfo2 {
             width: 50%;
-            /* 너비 */
             margin: 10px auto;
-            /* 바깥 여백 */
             padding: 10px;
-            /* 테두리와 내용 사이 여백 */
-            color: brown
+            color: brown;
         }
-
-   
-
-      
 
         #result {
             display: flex;
-            /* 이미지를 세로로 나란히 배치 */
             flex-direction: column;
             margin-top: 100px;
             padding: 50px;
             border: 1px solid #ccc;
             width: 700px;
             height: auto;
-            /* 높이 자동 조절 */
             margin: 30px auto;
             border-radius: 15px;
         }
 
         .item {
             display: flex;
-            /* 이미지와 텍스트를 가로로 나란히 배치 */
             font-size: 25px;
             margin-bottom: 10px;
-            
-            /* 항목 간격 */
         }
 
         .image {
             width: 200px;
-            /* 이미지 너비 */
             height: 200px;
-            /* 이미지 높이 */
             margin-right: 50px;
-            /* 이미지와 텍스트 간격 */
         }
 
         a:link,
@@ -139,9 +124,10 @@
 
         ul2 {
             list-style: none;
-            width: 500px;
+            width: 100%; /* 100% 너비 */
             margin: 10px auto;
             padding: 0;
+            text-align: center; /* 텍스트 중앙 정렬 */
         }
 
         li2 {
@@ -151,19 +137,16 @@
             padding: 10px 15px;
             font-size: 20px;
             text-align: center;
+            margin: 10px; /* 항목 간격 */
         }
 
         .description {
             max-width: 1000px;
-            /* 텍스트 최대 너비 */
-
         }
 
         p {
             margin: 0;
-            /* 기본 마진 제거 */
             line-height: 2.5em;
-            /* 줄 높이 조절 */
         }
     </style>
 </head>
@@ -185,11 +168,12 @@
 
         <div class="login"><a href="1.html">Login</a></div>
     </header>
-    <ul2>
+    
+    <ul style="text-align: center;"> <!-- ul2 대신 인라인 스타일로 설정 -->
         <li2><a href="#" onclick="changeBg('green')">강갈비탕</a></li2>
         <li2><a href="#" onclick="changeBg('orange')">라마앤바나나</a></li2>
         <li2><a href="#" onclick="changeBg('purple')">흥부돼지국밥</a></li2>
-    </ul2>
+    </ul>
 
     <div id="result"></div>
 
@@ -260,5 +244,4 @@
         }
     </script>
 </body>
-
 </html>
