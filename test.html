@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 변경</title>
+    <style>
+        #result {
+            display: flex;
+            /* 이미지를 세로로 나란히 배치 */
+            flex-direction: column; 
+            margin-top: 100px;
+            padding: 50px;
+            border: 1px solid #ccc;
+            width: 400px;
+            height: auto; /* 높이 자동 조절 */
+            margin: 30px auto;
+            border-radius: 15px;
+        }
+
+        .item {
+            display: flex; /* 이미지와 텍스트를 가로로 나란히 배치 */
+            margin-bottom: 10px; /* 항목 간격 */
+        }
+
+        .image {
+            width: 100px; /* 이미지 너비 */
+            height: 100px; /* 이미지 높이 */
+            margin-right: 50px; /* 이미지와 텍스트 간격 */
+        }
+
+        a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            width: 120px;
+            border: 1px solid #ccc;
+            padding: 10px 15px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .description {
+            max-width: 800px; /* 텍스트 최대 너비 */
+           
+        }
+
+        p {
+            margin: 0; /* 기본 마진 제거 */
+            line-height: 1.5em; /* 줄 높이 조절 */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Perfect Golf Swing</a></h1>
+        <nav>
+            <ul>
+                <li><a href="2.html">Equipment</a></li>
+                <li><a href="3.html">Lessons</a></li>
+                <li><a href="4.html">Tournaments</a></li>
+                <li><a href="5.html">Accessories</a></li>
+                <li><a href="practice.html">practice(5~9)</a></li>
+                <li><a href="practice2.html" >practice(10~13)</a></li>
+                <li><a href="test.html"class="active">음식점메뉴소개</a></li>
+            </ul>
+        </nav>
+
+        <div class="login"><a href="1.html">Login</a></div>
+    </header>
+    <ul>
+        <li><a href="#" onclick="changeBg('green')">강갈비탕</a></li>
+        <li><a href="#" onclick="changeBg('orange')">라마앤바나나</a></li>
+        <li><a href="#" onclick="changeBg('purple')">흥부돼지국밥</a></li>
+    </ul>
+
+    <div id="result"></div>
+
+    <script>
+        function changeBg(color) {
+            var result = document.querySelector('#result');
+            result.innerHTML = ''; // 이전 내용 삭제
+
+            // 색상에 따라 이미지와 설명 설정
+            let items;
+            if (color === 'green') {
+                items = [
+                    { 
+                        src: '강갈비탕.jpg', 
+                        text: [
+                            '★ 강갈비탕 : 12,500원', 
+                            '★ 아롱사태 수육 : 24,000원', 
+                            '★ 강갈비국밥 : 8,500원' 
+                        ] 
+                    },
+                ];
+            } else if (color === 'orange') {
+                items = [
+                    { 
+                        src: '라마앤바나나.jpg', 
+                        text: [
+                            '★ 탄두리 파니르 : 20,000원', 
+                            '★ 인디아 퀘사디아 : 17,000원', 
+                            '★ 탄두리 띠까 : 16,000원' 
+                        ] 
+                    },
+                ];
+            } else if (color === 'purple') {
+                items = [
+                    { 
+                        src: '흥부돼지국밥.jpg', 
+                        text: [
+                            '★ 막 삶은 돼지국밥 : 9,000원', 
+                            '★ 순대국밥 : 9,000원', 
+                            '★ 고기왕만두(5개) : 8,000원' 
+                        ] 
+                    },
+                  ];
+            }
+
+            // 결과 div에 이미지와 설명 추가
+            items.forEach(item => {
+                let itemDiv = document.createElement('div');
+                itemDiv.className = 'item';
+
+                let img = document.createElement('img');
+                img.src = item.src;
+                img.className = 'image';
+
+                let description = document.createElement('div');
+                description.className = 'description';
+
+                item.text.forEach(line => {
+                    let text = document.createElement('p');
+                    text.textContent = line;
+                    description.appendChild(text);
+                });
+
+                itemDiv.appendChild(img);
+                itemDiv.appendChild(description);
+                result.appendChild(itemDiv);
+            });
+        }
+    </script>
+</body>
+</html>

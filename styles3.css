@@ -101,15 +101,20 @@ li2 {
     padding: 20px;
     margin: 5px;
 }
-p{margin-bottom: 50px;}
+
+p {
+    margin-bottom: 50px;
+}
+
 #Academy a[href *="academy"] {
     /* href 속성값 중에 w3가 있는 a 요소를 찾는 선택자 */
-    
+
     background: blue;
     color: white;
 }
+
 #Academy ul {
-    
+
     list-style: circle;
 }
 
@@ -122,71 +127,80 @@ p{margin-bottom: 50px;}
     color: black;
     text-decoration: none;
 }
+
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	background: #ccc;
-	padding: 0px;	
-    
+    background: #ccc;
+    padding: 0px;
+
 }
 
 #signup {
-	background:#fff;
-	border:1px solid #222;
-	border-radius: 5px;
-	padding: 20px;
-	width: 400px;	
+    background: #fff;
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
 }
-		
+
 #signup fieldset {
-	border: 1px solid #ccc;
-	margin-bottom: 30px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
 }
 
 #signup fieldset:last-of-type {
-	border:none;
+    border: none;
 }
 
 #signup legend {
-	font-size: 16px;
-	font-weight: bold;
-	padding-left:5px;
-	padding-bottom: 10px;	
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
 }
-			
+
 #signup ul li {
-	line-height: 30px;
-	list-style: none;
-	padding: 5px 10px;
-	margin-bottom: 2px;
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
 }
-			
+
 #signup label {
-	float: left;
-	font-size: 13px;
-	width: 110px;
+    float: left;
+    font-size: 13px;
+    width: 110px;
 }
 
-#signup button {	
-	border: 1px solid #222;
-	border-radius: 20px;
-	display: block;
-	font-size: 16px;
-	letter-spacing: 1px;
-	margin: auto;
-	padding: 7px 25px;
+#signup button {
+    border: 1px solid #222;
+    border-radius: 20px;
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: auto;
+    padding: 7px 25px;
 }
 
-#signup input[type=text], #signup input[type=password], #signup input[type=tel], #signup input[type=email] {
-	border: 1px solid #ccc;  /* 텍스트 필드 테두리 지정 */
-	border-radius: 3px;  /* 텍스트 필드 모서리를 둥글게 지정 */
-	font-size: 13px;  /* 텍스트 필드 안의 글자 크기 지정 */
-	padding: 5px;  /* 텍스트 필드와 내용 사이의 패딩 지정 */
-	width: 200px;  /* 텍스트 필드 너비 지정 */
-}					
+#signup input[type=text],
+#signup input[type=password],
+#signup input[type=tel],
+#signup input[type=email] {
+    border: 1px solid #ccc;
+    /* 텍스트 필드 테두리 지정 */
+    border-radius: 3px;
+    /* 텍스트 필드 모서리를 둥글게 지정 */
+    font-size: 13px;
+    /* 텍스트 필드 안의 글자 크기 지정 */
+    padding: 5px;
+    /* 텍스트 필드와 내용 사이의 패딩 지정 */
+    width: 200px;
+    /* 텍스트 필드 너비 지정 */
+}
 
 /*
 #signup input:not[type=radio] { 
@@ -234,116 +248,337 @@ body {
     background-image: url('박기수프로.jpg');
     animation: fade-in 1.5s infinite;
 }
+
 #box5 {
     background-image: url('로리맥길로이.jpg');
     animation: shake 1.5s infinite;
 }
+
 #box6 {
     background-image: url('타이거우즈.jpg');
     animation: flip 1.5s infinite;
 }
+
 #box7 {
     background-image: url('스코티세플러.jpg');
     animation: slide-in 1.5s infinite;
 }
+
 #box8 {
     background-image: url('김주형.jpg');
     animation: bounce 1.5s infinite;
 }
 
-
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes shape {
-    from { border: 1px solid transparent; }
-    to { border: 1px solid #000; border-radius: 50%; }
+    from {
+        border: 1px solid transparent;
+    }
+
+    to {
+        border: 1px solid #000;
+        border-radius: 50%;
+    }
 }
 
 @keyframes rotate {
-    from { transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
-    50% { transform: perspective(120px) rotateX(-180deg) rotateY(0deg); }
-    to { transform: perspective(120px) rotateX(-180deg) rotateY(-180deg); }
+    from {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+
+    50% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    }
 }
+
 @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
 }
+
 @keyframes flip {
-    from { transform: rotateY(0); }
-    to { transform: rotateY(360deg); }
+    from {
+        transform: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
 }
+
 @keyframes slide-in {
-    from { transform: translateX(-100%); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
+
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-30px); }
-    60% { transform: translateY(-15px); }
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
 }
+
 @keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
 }
+
 .box:hover {
     transform: scale(1.05);
 }
 
-#signup input[required] {  /* 필수 입력 필드의 스타일 */
-	border:1px red solid;
+#signup input[required] {
+    /* 필수 입력 필드의 스타일 */
+    border: 1px red solid;
 }
 
-#signup input[readonly] {  /* 읽기 전용 필드의 스타일 */
-	border:none;
+#signup input[readonly] {
+    /* 읽기 전용 필드의 스타일 */
+    border: none;
 }
 
-#signup button:hover {  /* #singup 하위에 있는 버튼에 마우스 올렸을 때 스타일 */
-  background-color:#222;
-  color:#fff;
+#signup button:hover {
+    /* #singup 하위에 있는 버튼에 마우스 올렸을 때 스타일 */
+    background-color: #222;
+    color: #fff;
 }
+
 #Academy a[href *="academy"] {
     /* href 속성값 중에 w3가 있는 a 요소를 찾는 선택자 */
     background: blue;
     color: white;
 }
+
 * {
     box-sizing: border-box;
 }
+
 body {
     background-color: #eee;
     font-size: 16px;
 }
+
 #wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1rem;
 }
+
+#wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
 .card {
     background-color: #fff;
     box-shadow: 0px 1px 5px #222;
 }
-.card > header {
+
+.card>header {
     font-size: 1.5rem;
     padding: 0.5rem;
 }
-.card > p {
+
+.card>p {
     padding: 0.5rem;
     line-height: 1.6em;
 }
-.card > img {
-    max-width: 1px; /* 이미지 크기를 줄임 */
-    height: auto; /* 비율 유지 */
-    display: block; /* 블록 요소로 설정하여 여백 조정 */
-    margin: 0 auto; /* 중앙 정렬 */
+
+.card>img {
+    max-width: 1px;
+    /* 이미지 크기를 줄임 */
+    height: auto;
+    /* 비율 유지 */
+    display: block;
+    /* 블록 요소로 설정하여 여백 조정 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
 }
 
+.container>img {
+    max-width: 1px;
+    /* 이미지 크기를 줄임 */
+    height: auto;
+    /* 비율 유지 */
+    display: block;
+    /* 블록 요소로 설정하여 여백 조정 */
+    margin: 0 auto;
+    /* 중앙 정렬 */
+}
 
+#opt1 {
+    justify-content: flex-start;
+    /* 주축 시작점 기준으로 배치 */
+}
+
+#opt2 {
+    justify-content: flex-end;
+    /* 주축 끝점 기준으로 배치 */
+}
+
+#opt3 {
+    justify-content: center;
+    /* 주축 중앙 기준으로 배치 */
+}
+
+#opt4 {
+    justify-content: space-between;
+    /* 시작점과 끝점 배치 후 중간 항목은 같은 간격으로 배치 */
+}
+
+#opt5 {
+    justify-content: space-around;
+    /* 전체 항목을 같은 간격으로 배치 */
+}
+
+.container2 {
+    float:left;
+    width:200px;
+    height:150px;
+    display:flex;          /* 플렉스 컨테이너 지정 */
+    flex-flow: row wrap;   /* 왼쪽에서 오른쪽, 여러 줄 표시 */
+    border:1px solid #222;
+    background-color:#eee;
+    margin:30px;
+}
+
+.container3 {
+    float: left;
+    width: 200px;
+    height: 150px;
+    display: flex;          /* 플렉스 컨테이너 지정 */
+    flex-flow: row wrap;   /* 왼쪽에서 오른쪽, 여러 줄 표시 */
+    border: 1px solid #222;
+    background-color: #eee;
+    margin: 30px;
+  }
+  #opt1 {
+    align-content: flex-start; /* 교차축 시작점 기준 */
+  }
+  #opt2 {
+    align-content: flex-end;   /* 교차축 끝점 기준 */
+  }
+  #opt3 {
+    align-content: center;     /* 교차축 중앙 기준 */
+  }
+  #opt4 {
+    align-content: space-between; /* 시작점과 끝점 배치 후 중간 항목은 같은 간격으로 배치 */
+  }
+  #opt5 {
+    align-content: space-around; /* 전체 항목을 같은 간격으로 배치 */
+  }
+  #opt6 {
+    align-content: stretch;      /* 항목을 늘려 교차축에 가득 차게 배치 */
+  }
+  .box10 {
+    width: 30px;
+    height: 30px; /* 박스 높이 추가 */
+    background-color: #222;   
+    border: 1px dotted #e9e9e9;   
+    background-size: cover; /* 이미지가 박스에 맞게 커버 */
+  }
+
+  #box11 {
+    background-image: url('김현지프로.jpg');
+  
+  }
+  
+  #box12 {
+    background-image: url('위혜림프로.jpg');
+   
+  }
+  
+  #box13 {
+    background-image: url('박흥수프로.jpg');
+    
+  }
+  
+  #box14 {
+    background-image: url('박기수프로.jpg');
+  
+  }
+  
+  #box15 {
+    background-image: url('로리맥길로이.jpg');
+    
+  }
+  
+  #box16 {
+    background-image: url('타이거우즈.jpg');
+   
+  }
+  
+  #box17 {
+    background-image: url('스코티세플러.jpg');
+   
+  }
+  
+  #box18 {
+    background-image: url('김주형.jpg');
+    
+  }
