@@ -21,10 +21,9 @@
                 <li><a href="test.html" class="active">음식소개</a></li>
             </ul>
         </nav>
-
         <div class="login"><a href="1.html">Login</a></div>
     </header>
-    
+
     <div id="nav2">
         <ul class="ul2">
             <li class="li2"><a href="#" onclick="changeBg('green')">강갈비탕</a></li>
@@ -35,13 +34,78 @@
     </div>
 
     <div id="result"></div>
-    
+
+    <div id="menu-management" style="text-align: center; margin-top: 20px;">
+        <h2>먹고 싶은 메뉴 등록하기</h2>
+        <input type="text" id="menuInput" placeholder="메뉴 이름을 입력하세요" style="padding: 10px; width: 200px;" onkeypress="handleKeyPress(event)">
+    </div>
+
+    <div id="addedMenus" style="margin-top: 20px; text-align: center;"></div>
+
     <script>
+        const menuItems = [
+            {
+                src: '갈비탕.jpg',
+                text: ['강갈비탕 : 12,500원'
+                ,'직접 매일 끓이는 한우 사골 육수로 만든 쫄깃한 갈비탕 으로 든든한 한끼 하세요!'
+                ]
+            },
+            {
+                src: '아롱사태수육.jpg',
+                text: ['아롱사태 수육 : 24,000원'
+                    ,'쫀득한 아롱사태 수육 ~ 식사로 술안주로 딱 입니다 ^^'
+                ]
+            },
+            {
+                src: '갈비국밥.jpg',
+                text: ['강갈비국밥 : 8,500원'
+                    ,'살코기 좋아하시는 분 강추 ~! 든든한 한우 사골 육수 가성비 국밥 !'
+                ]
+            },
+            {
+                src: '탄두리파니르.jpg',
+                text: ['탄두리 파니르 : 20,000원'
+                    ,'인도 북부식 탕두리 치킨. 마살라, 코리엔더, 카더몬 등 12가지 향신료로 숙성시켜 부드러움.'
+                ]
+            },
+            {
+                src: '인디아퀘사디아.jpg',
+                text: ['인디아 퀘사디아 : 17,000원'
+                    ,'얇고 바삭한 통밀 브리또에 코리앤더, 가람 마살라 등 식자재를 담은 매콤한 맛의 퀘사디아.'
+                ]
+            },
+            {
+                src: '탄두리띠까.jpg',
+                text: ['탄두리 띠까 : 16,000원'
+                    ,'국내산 닭가슴살과 활새우를 탄두리 소스에 하루 동안 숙성시켜 250도 화덕에 구워낸 요리.'
+                ]
+            },
+            {
+                src: '흥부돼지국밥.jpg',
+                text: ['막 삶은 돼지국밥 : 9,000원'
+                    ,'당일 삶아 부드러운 고기와 찐~한 사골육수맛이 일품'
+                ]
+            },
+            {
+                src: '순대국밥.jpg',
+                text: ['순대국밥 : 9,000원'
+                    ,'일반 찰순대가 아닌 냄새없고 쓴맛없는 고기 듬뿍들어간 토종순대로 만든 돼지국밥'
+                ]
+            },
+            {
+                src: '고기왕만두.jpg',
+                text: ['고기왕만두(5개) : 8,000원'
+                    ,'피가 얇아 더욱 맛있습니다.'
+                ]
+            },
+        ];
+
+        const addedMenus = [];
+
         function changeBg(color) {
-            var result = document.querySelector('#result');
+            const result = document.querySelector('#result');
             result.innerHTML = ''; // 이전 내용 삭제
 
-            // 색상에 따라 이미지와 설명 설정
             let items;
             if (color === 'green') {
                 items = [
@@ -78,7 +142,6 @@
                 ];
             }
 
-            // 결과 div에 이미지와 설명 추가
             items.forEach(item => {
                 let itemDiv = document.createElement('div');
                 itemDiv.className = 'item';
@@ -102,54 +165,13 @@
             });
         }
 
-        const menuItems = [
-            {
-                src: '갈비탕.jpg',
-                text: ['강갈비탕 : 12,500원']
-            },
-            {
-                src: '아롱사태수육.jpg',
-                text: ['아롱사태 수육 : 24,000원']
-            },
-            {
-                src: '갈비국밥.jpg',
-                text: ['강갈비국밥 : 8,500원']
-            },
-            {
-                src: '탄두리파니르.jpg',
-                text: ['탄두리 파니르 : 20,000원']
-            },
-            {
-                src: '인디아퀘사디아.jpg',
-                text: ['인디아 퀘사디아 : 17,000원']
-            },
-            {
-                src: '탄두리띠까.jpg',
-                text: ['탄두리 띠까 : 16,000원']
-            },
-            {
-                src: '막삶은돼지국밥.jpg',
-                text: ['막 삶은 돼지국밥 : 9,000원']
-            },
-            {
-                src: '순대국밥.jpg',
-                text: ['순대국밥 : 9,000원']
-            },
-            {
-                src: '고기왕만두.jpg',
-                text: ['고기왕만두(5개) : 8,000원']
-            },
-        ];
-
         function showRandomItem() {
             const result = document.querySelector('#result');
             result.innerHTML = ''; // 이전 내용 삭제
 
-            // 랜덤으로 하나의 아이템 선택
             const randomIndex = Math.floor(Math.random() * menuItems.length);
             const selectedItem = menuItems[randomIndex];
 
-            // 결과 div에 이미지와 설명 추가
             let itemDiv = document.createElement('div');
             itemDiv.className = 'item';
 
@@ -169,6 +191,38 @@
             itemDiv.appendChild(img);
             itemDiv.appendChild(description);
             result.appendChild(itemDiv);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                const menuInput = document.getElementById('menuInput');
+                const menuName = menuInput.value.trim();
+
+                if (menuName) {
+                    addedMenus.push(menuName);
+                    menuInput.value = ''; // 입력창 초기화
+                    displayAddedMenus();
+                }
+            }
+        }
+
+        function displayAddedMenus() {
+            const addedMenusDiv = document.getElementById('addedMenus');
+            addedMenusDiv.innerHTML = '<h3>등록된 메뉴:</h3>';
+            addedMenus.forEach(menu => {
+                const menuElement = document.createElement('p');
+                menuElement.textContent = menu;
+                menuElement.onclick = () => removeMenu(menu); // 클릭 시 삭제
+                addedMenusDiv.appendChild(menuElement);
+            });
+        }
+
+        function removeMenu(menuName) {
+            const index = addedMenus.indexOf(menuName);
+            if (index !== -1) {
+                addedMenus.splice(index, 1);
+                displayAddedMenus();
+            }
         }
     </script>
 </body>
