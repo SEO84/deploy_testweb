@@ -3,152 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="styles.css">
     <title>이미지 변경</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: rgb(255, 255, 255);
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header a {
-            background-color: #333;
-            color: rgb(255, 255, 255);
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li a.active {
-            color: yellow;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-        }
-
-        .login a {
-            color: white;
-            text-decoration: none;
-            background-color: #4b739e;
-            padding: 10px 15px;
-            border-radius: 5px;
-        }
-
-        section {
-            padding: 40px;
-            margin: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-        }
-
-        section h2 {
-            color: #007BFF;
-        }
-
-        section a {
-            display: block;
-            margin-top: 10px;
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-
-        #MyInfo2 {
-            width: 50%;
-            margin: 10px auto;
-            padding: 10px;
-            color: brown;
-        }
-
-        #result {
-            display: flex;
-            flex-direction: column;
-            margin-top: 100px;
-            padding: 50px;
-            border: 1px solid #ccc;
-            width: 700px;
-            height: auto;
-            margin: 30px auto;
-            border-radius: 15px;
-        }
-
-        .item {
-            display: flex;
-            font-size: 25px;
-            margin-bottom: 10px;
-        }
-
-        .image {
-            width: 200px;
-            height: 200px;
-            margin-right: 50px;
-        }
-
-        a:link,
-        a:visited {
-            color: black;
-            text-decoration: none;
-        }
-
-        ul2 {
-            list-style: none;
-            width: 100%; /* 100% 너비 */
-            margin: 10px auto;
-            padding: 0;
-            text-align: center; /* 텍스트 중앙 정렬 */
-        }
-
-        li2 {
-            display: inline-block;
-            width: 200px;
-            border: 1px solid #ccc;
-            padding: 10px 15px;
-            font-size: 20px;
-            text-align: center;
-            margin: 10px; /* 항목 간격 */
-        }
-
-        .description {
-            max-width: 1000px;
-        }
-
-        p {
-            margin: 0;
-            line-height: 2.5em;
-        }
-    </style>
 </head>
 
 <body>
@@ -156,7 +12,7 @@
         <h1><a href="index.html">Perfect Golf Swing</a></h1>
         <nav>
             <ul>
-                <li><a href="2.html">Equipment</a></li>
+                <li><a href="swing.html">Swing</a></li>
                 <li><a href="3.html">Lessons</a></li>
                 <li><a href="4.html">Tournaments</a></li>
                 <li><a href="5.html">Accessories</a></li>
@@ -169,14 +25,17 @@
         <div class="login"><a href="1.html">Login</a></div>
     </header>
     
-    <ul style="text-align: center;"> <!-- ul2 대신 인라인 스타일로 설정 -->
-        <li2><a href="#" onclick="changeBg('green')">강갈비탕</a></li2>
-        <li2><a href="#" onclick="changeBg('orange')">라마앤바나나</a></li2>
-        <li2><a href="#" onclick="changeBg('purple')">흥부돼지국밥</a></li2>
-    </ul>
+    <div id="nav2">
+        <ul class="ul2">
+            <li class="li2"><a href="#" onclick="changeBg('green')">강갈비탕</a></li>
+            <li class="li2"><a href="#" onclick="changeBg('orange')">라마앤바나나</a></li>
+            <li class="li2"><a href="#" onclick="changeBg('purple')">흥부돼지국밥</a></li>
+            <li class="li2"><a href="#" onclick="showRandomItem()">메뉴 랜덤 보여주기</a></li>
+        </ul>
+    </div>
 
     <div id="result"></div>
-
+    
     <script>
         function changeBg(color) {
             var result = document.querySelector('#result');
@@ -241,6 +100,75 @@
                 itemDiv.appendChild(description);
                 result.appendChild(itemDiv);
             });
+        }
+
+        const menuItems = [
+            {
+                src: '갈비탕.jpg',
+                text: ['강갈비탕 : 12,500원']
+            },
+            {
+                src: '아롱사태수육.jpg',
+                text: ['아롱사태 수육 : 24,000원']
+            },
+            {
+                src: '갈비국밥.jpg',
+                text: ['강갈비국밥 : 8,500원']
+            },
+            {
+                src: '탄두리파니르.jpg',
+                text: ['탄두리 파니르 : 20,000원']
+            },
+            {
+                src: '인디아퀘사디아.jpg',
+                text: ['인디아 퀘사디아 : 17,000원']
+            },
+            {
+                src: '탄두리띠까.jpg',
+                text: ['탄두리 띠까 : 16,000원']
+            },
+            {
+                src: '막삶은돼지국밥.jpg',
+                text: ['막 삶은 돼지국밥 : 9,000원']
+            },
+            {
+                src: '순대국밥.jpg',
+                text: ['순대국밥 : 9,000원']
+            },
+            {
+                src: '고기왕만두.jpg',
+                text: ['고기왕만두(5개) : 8,000원']
+            },
+        ];
+
+        function showRandomItem() {
+            const result = document.querySelector('#result');
+            result.innerHTML = ''; // 이전 내용 삭제
+
+            // 랜덤으로 하나의 아이템 선택
+            const randomIndex = Math.floor(Math.random() * menuItems.length);
+            const selectedItem = menuItems[randomIndex];
+
+            // 결과 div에 이미지와 설명 추가
+            let itemDiv = document.createElement('div');
+            itemDiv.className = 'item';
+
+            let img = document.createElement('img');
+            img.src = selectedItem.src;
+            img.className = 'image';
+
+            let description = document.createElement('div');
+            description.className = 'description';
+
+            selectedItem.text.forEach(line => {
+                let text = document.createElement('p');
+                text.textContent = line;
+                description.appendChild(text);
+            });
+
+            itemDiv.appendChild(img);
+            itemDiv.appendChild(description);
+            result.appendChild(itemDiv);
         }
     </script>
 </body>

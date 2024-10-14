@@ -1,172 +1,519 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
-
-* {
-  box-sizing: border-box;
-}
 body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    /* 마지막에 정의된 값 사용 */
 }
-.wrapper {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Adding a background image */
-  background: url(로그인배경화면.jpg) no-repeat center center fixed; /* Replace with your image URL */
-  background-size: cover; /* Ensure the background covers the entire wrapper */
-  overflow: hidden;
+
+header {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.container {
-  border-radius: 10px;
-  box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;
-  position: absolute;
-  width: 768px;
-  min-height: 480px;
-  overflow: hidden;
+
+header a {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-form {
-  background: #ebecf0; /* Form background color */
-  display: flex;
-  flex-direction: column;
-  padding: 0 50px;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+
 }
-form input {
-  background: #eee;
-  padding: 16px;
-  margin: 8px 0;
-  width: 85%;
-  border: 0;
-  outline: none;
-  border-radius: 20px;
-  box-shadow: inset 7px 2px 10px #babebc, inset -5px -5px 12px #fff;
+
+nav ul2 {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
 }
-button {
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 15px 45px;
-  margin: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: transform 80ms ease-in;
+
+nav ul li a.active {
+    color: yellow;
 }
-.form_btn {
-  box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+
+nav ul li {
+    margin: 0 15px;
 }
-.form_btn:active {
-  box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
-.overlay_btn {
-  background-color: #72a5f1;
-  color: #fff;
-  box-shadow: -5px -5px 10px #72a5f1, 5px 5px 8px #72a5f1;
+
+#nav2 .ul2 {
+    text-align: center;
+    list-style: none;
+    /* 기본 리스트 스타일 제거 */
+    padding: 0;
+    /* 패딩 제거 */
 }
-.sign-in-container {
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  transition: all 0.5s;
+
+#nav2 .ul2 .li2 {
+    display: inline-block;
+    /* 수평으로 나열 */
+    margin: 0 10px;
+    /* 양쪽에 여백 추가 */
 }
-.sign-up-container {
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  opacity: 0;
-  transition: all 0.5s;
+
+#nav2 .ul2 .li2 a {
+    display: inline-block;
+    margin: 50px 10px;
+    background-color: #3da368;
+    /* 배경색 */
+    color: white;
+    /* 글자색 */
+    padding: 5px 15px;
+    /* 내부 여백 */
+    border-radius: 5px;
+    /* 둥근 모서리 */
+    text-decoration: none;
+    /* 밑줄 제거 */
+    height: auto;
 }
-.overlay-left {
-  display: flex;
-  flex-direction: column;
-  padding: 0 50px;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  opacity: 0;
-  background-color: #72a5f1;
-  color: #fff;
-  transition: all 0.5s;
+
+nav2 ul2 li2 a:hover {
+    background-color: #3a5d7a;
+    /* 마우스 오버 시 배경색 변경 */
 }
-.overlay-right {
-  display: flex;
-  flex-direction: column;
-  padding: 0 50px;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #72a5f1;
-  color: #fff;
-  transition: all 0.5s;
+
+.login a {
+    color: white;
+    text-decoration: none;
+    background-color: #4b739e;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
-.container.right-panel-active .sign-in-container {
-  transform: translateX(100%);
-  opacity: 0;
+
+section {
+    padding: 40px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
 }
-.container.right-panel-active .sign-up-container {
-  transform: translateX(100%);
-  opacity: 1;
-  z-index: 2;
+
+section h2 {
+    color: #007BFF;
 }
-.container.right-panel-active .overlay-right {
-  transform: translateX(-100%);
-  opacity: 0;
+
+section a {
+    display: block;
+    margin-top: 10px;
+    color: #007BFF;
+    text-decoration: none;
 }
-.container.right-panel-active .overlay-left {
-  transform: translateX(-100%);
-  opacity: 1;
-  z-index: 2;
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
-.social-links {
-  margin: 20px 0;
+
+#MyInfo2 {
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    color: brown;
 }
-form h1 {
-  font-weight: bold;
-  margin: 0;
-  color: #000;
-}
+
 
 p {
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  margin: 20px 0 30px;
+    margin-bottom: 50px;
 }
-span {
-  font-size: 12px;
-  color: #000;
-  letter-spacing: 0.5px;
-  margin-bottom: 10px;
+
+#Academy a[href*="academy"] {
+    background: blue;
+    color: white;
 }
-.social-links div {
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 5px;
-  border-radius: 50%;
-  box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
-  cursor: pointer;
+
+#Academy ul {
+    list-style: circle;
 }
-.social-links a {
-  color: #000;
+
+#Academy li {
+    padding: 5px 30px;
 }
-.social-links div:active {
-  box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+
+#Academy li a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#signup {
+    background: #fff;
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+}
+
+#signup fieldset {
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+#signup fieldset:last-of-type {
+    border: none;
+}
+
+#signup legend {
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+
+#signup ul li {
+    line-height: 30px;
+    list-style: none;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+
+#signup label {
+    float: left;
+    font-size: 13px;
+    width: 110px;
+}
+
+#signup button {
+    border: 1px solid #222;
+    border-radius: 20px;
+    display: block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: auto;
+    padding: 7px 25px;
+}
+
+#signup input[type=text],
+#signup input[type=password],
+#signup input[type=tel],
+#signup input[type=email] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 5px;
+    width: 200px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+#box1 {
+    background-image: url('김현지프로.jpg');
+    animation: pulse 1.5s infinite;
+}
+
+#box2 {
+    background-image: url('위혜림프로.jpg');
+    animation: spin 1.5s infinite;
+}
+
+#box3 {
+    background-image: url('박흥수프로.jpg');
+    animation: shape 1.5s infinite;
+}
+
+#box4 {
+    background-image: url('박기수프로.jpg');
+    animation: fade-in 1.5s infinite;
+}
+
+#box5 {
+    background-image: url('로리맥길로이.jpg');
+    animation: shake 1.5s infinite;
+}
+
+#box6 {
+    background-image: url('타이거우즈.jpg');
+    animation: flip 1.5s infinite;
+}
+
+#box7 {
+    background-image: url('스코티세플러.jpg');
+    animation: slide-in 1.5s infinite;
+}
+
+#box8 {
+    background-image: url('김주형.jpg');
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shape {
+    from {
+        border: 1px solid transparent;
+    }
+
+    to {
+        border: 1px solid #000;
+        border-radius: 50%;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+}
+
+@keyframes flip {
+    from {
+        transform: rotateY(0);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+#signup input[required] {
+    border: 1px red solid;
+}
+
+#signup input[readonly] {
+    border: none;
+}
+
+#signup button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+#wrapper2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0px 1px 5px #222;
+}
+
+.card>header {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+
+.card>p {
+    padding: 0.5rem;
+    line-height: 1.6em;
+}
+
+.card>img {
+    max-width: 100%;
+    /* 수정된 부분 */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.container>img {
+    max-width: 100%;
+    /* 수정된 부분 */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.container2,
+.container3 {
+    float: left;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid #222;
+    background-color: #eee;
+    margin: 30px;
+}
+
+#opt1,
+#opt2,
+#opt3,
+#opt4,
+#opt5 {
+    display: flex;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 50px;
+    border: 1px solid #ccc;
+    width: 700px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 15px;
+}
+
+.item {
+    display: flex;
+    font-size: 25px;
+    margin-bottom: -20px;
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+}
+
+a:link {
+    color: rgb(251, 252, 251);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(252, 248, 248);
+    text-decoration: none;
+}
+
+
+.description {
+    max-width: 1000px;
+}
+
+ /* 그리드 스타일 */
+ .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5개의 열 */
+    gap: 20px; /* 항목 사이의 간격 */
+    margin: 0 ; /* 그리드 주변 여백 */
+}
+
+.grid-item {
+    text-align: center; /* 이미지와 텍스트 중앙 정렬 */
+    border: 2px solid #3da368; /* 테두리 설정 */
+    border-radius: 8px; /* 둥근 모서리 */
+    padding: 10px; /* 내부 여백 */
+}
+
+.grid-item img {
+    width: 100%; /* 이미지가 셀의 너비를 차지하게 설정 */
+    height: auto; /* 비율 유지 */
+    border-radius: 8px; /* 둥근 모서리 */
+}
+
+h2 {
+    text-align: center; /* 제목 중앙 정렬 */
+}
+
+.section-title {
+    grid-column: span 5; /* 소제목이 5개 열을 차지하도록 설정 */
+    text-align: left;
+    margin: 10px 0; /* 상하 여백 */
+    font-size: 2em; /* 소제목 크기 */
+    color: #131614; /* 소제목 색상 */
 }
